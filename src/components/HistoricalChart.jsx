@@ -6,11 +6,9 @@ const CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 const chartOptions = {
   animationEnabled: true,
-  exportEnabled: true,
   theme: "light2",
-  exportFileName: "OLHC data",
   title: {
-    text: "OLHC Data"
+    text: "Kaboom Prices"
   },
   axisY: {
     includeZero: false,
@@ -33,7 +31,7 @@ class HistoricalChart extends Component {
   }
 
   getOLHCDataPoints = dataPoint => {
-    console.log({ dataPoint });
+    // console.log({ dataPoint });
     const [timeStamp, ...rest] = dataPoint.split(",");
     return {
       x: new Date(Number(timeStamp)),
